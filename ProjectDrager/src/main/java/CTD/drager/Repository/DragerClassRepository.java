@@ -16,7 +16,7 @@ public class DragerClassRepository implements DragerRepository {
 
     Drager ARHA_0405 = new Drager("Drager x-Am 5600", "ARHA-0405", "5222789", "ЦЕХ ИКС Уколов", "31.12.2024", "В резерве");
     Drager ARHA_0412 = new Drager("Drager x-Am 5600", "ARHA-0412", "5222790", "ЦЕХ ИКС Уколов", "31.12.2024", "В резерве");
-    Drager ARKJ_0075 = new Drager("Drager x-Am 5600", "ARKJ-0075", "5400262", "ЦЕХ ИКС Уколов", "14.02.2024", "В работе");
+    Drager ARKJ_0075 = new Drager("Drager x-Am 5600", "ARKJ-0075", "5400262", "ЦЕХ ИКС Уколов", "23.02.2024", "В работе");
     Drager ARKJ_0078 = new Drager("Drager x-Am 5600", "ARKJ-0078", "5400261", "ЦЕХ ИКС Уколов", "31.12.2024", "В поверке");
     Drager ARKC_0062 = new Drager("Drager x-Am 5600", "ARKC-0062", "5400260", "ЦЕХ ИКС Уколов", "31.12.2024", "В работе");
     Drager ARCB_0204 = new Drager("Drager x-Am 7000", "ARCB-0204", "3060184", "ЦЕХ ИКС Уколов", "06.04.2024", "В резерве");
@@ -48,17 +48,14 @@ public class DragerClassRepository implements DragerRepository {
     Drager AREE_0282 = new Drager("Drager x-Am 7000", "AREE_0282", "4680478", "ЦЕХ ДЭКТ Акчурин", "06.04.2024", "Калибровка");
     Drager ARFB_0205 = new Drager("Drager x-Am 7000", "ARFB_0205", "4919005", "ЦЕХ ДЭКТ Акчурин", "20.07.2024", "Калибровка");
 
-
-
     public ArrayList<Drager> returnDrager() {
-        Drager[] masDrag={ARHA_0405,ARHA_0412,ARKJ_0075,ARKJ_0078,ARKC_0062,ARCB_0204,ARCB_0524,ARCB_0212,ARAC_0376,ARRA_0214,ARRA_0219,ARAC_0372,ARBJ_0335,ARBJ_0375,ARDA_0243,
-        ARDA_0295,ARDA_0305,ARPC_0206,ARRA_0215,ARRA_0225,ARRA_0238,ARRA_0218,ARRA_0240,ARHA_0406,ARCB_0517,ARCB_0526,ARDA_0230,AREE_0281,ARFB_0202,ARHA_0389,ARAC_0373,AREE_0282,
-        ARFB_0205};
-        ArrayList<Drager> spisokDrager=new ArrayList<>();
-        spisokDrager.addAll(Arrays.asList(masDrag));
-
-        return spisokDrager;
+        Drager[] Dragers = {
+                ARHA_0405, ARHA_0412, ARKJ_0075, ARKJ_0078, ARKC_0062, ARCB_0204, ARCB_0524, ARCB_0212, ARAC_0376, ARRA_0214, ARRA_0219,
+                ARAC_0372, ARBJ_0335, ARBJ_0375, ARDA_0243, ARDA_0295, ARDA_0305, ARPC_0206, ARRA_0215, ARRA_0225, ARRA_0238, ARRA_0218,
+                ARRA_0240, ARHA_0406, ARCB_0517, ARCB_0526, ARDA_0230, AREE_0281, ARFB_0202, ARHA_0389, ARAC_0373, AREE_0282, ARFB_0205
+        };
+        ArrayList<Drager> dragerList = new ArrayList<>();
+        dragerList.addAll(Arrays.asList(Dragers));
+        return dragerList;
     }
-
-    
 }
