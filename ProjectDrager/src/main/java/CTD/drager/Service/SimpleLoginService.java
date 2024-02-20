@@ -20,5 +20,4 @@ public class SimpleLoginService implements LoginService{
         this.password=password;
         return username.equals("ctd")&&password.equals("1234");
     }
-
 }
