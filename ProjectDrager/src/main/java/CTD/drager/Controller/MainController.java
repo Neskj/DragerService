@@ -2,12 +2,10 @@ package CTD.drager.Controller;
 
 import CTD.drager.Service.DragerService;
 import CTD.drager.Service.LoginService;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-
 import CTD.drager.Calendar.CheckCalendar;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -28,7 +26,6 @@ public class MainController {
     public String drager(Model page){
         String date=CheckCalendar.checkDate();
         page.addAttribute("date",date);
-
         dragerService.getDragerList();
         var dragers=dragerService.showDragerList();
         page.addAttribute("dragers",dragers);
@@ -47,12 +44,9 @@ public class MainController {
             page.addAttribute("message","Добро пожаловать!");
             checkLogin=true;
             return "redirect:/drager";
-        }
-        else {
+        } else {
             page.addAttribute("message","Не правильный логин или пароль!");
             return "login.html";
         }
     }
-
-
 }

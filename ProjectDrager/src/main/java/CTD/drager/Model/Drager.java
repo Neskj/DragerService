@@ -19,10 +19,7 @@ public class Drager {
         flag = "white";
     }
 
-    public String getModel() {
-
-        return model;
-    }
+    public String getModel() { return model; }
 
     public String getSerial() {
         return serial;
