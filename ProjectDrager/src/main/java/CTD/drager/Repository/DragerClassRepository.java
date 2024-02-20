@@ -16,9 +16,9 @@ public class DragerClassRepository implements DragerRepository {
 
     Drager ARHA_0405 = new Drager("Drager x-Am 5600", "ARHA-0405", "5222789", "ЦЕХ ИКС Уколов", "31.12.2024", "В резерве");
     Drager ARHA_0412 = new Drager("Drager x-Am 5600", "ARHA-0412", "5222790", "ЦЕХ ИКС Уколов", "31.12.2024", "В резерве");
-    Drager ARKJ_0075 = new Drager("Drager x-Am 5600", "ARKJ-0075", "5400262", "ЦЕХ ИКС Уколов", "23.02.2024", "В работе");
-    Drager ARKJ_0078 = new Drager("Drager x-Am 5600", "ARKJ-0078", "5400261", "ЦЕХ ИКС Уколов", "31.12.2024", "В поверке");
-    Drager ARKC_0062 = new Drager("Drager x-Am 5600", "ARKC-0062", "5400260", "ЦЕХ ИКС Уколов", "31.12.2024", "В работе");
+    Drager ARKJ_0075 = new Drager("Drager x-Am 5600", "ARKJ-0075", "5400262", "ЦЕХ ИКС Уколов", "28.02.2024", "В работе");
+    Drager ARKJ_0078 = new Drager("Drager x-Am 5600", "ARKJ-0078", "5400261", "ЦЕХ ИКС Уколов", "22.02.2024", "В поверке");
+    Drager ARKC_0062 = new Drager("Drager x-Am 5600", "ARKC-0062", "5400260", "ЦЕХ ИКС Уколов", "20.02.2024", "В работе");
     Drager ARCB_0204 = new Drager("Drager x-Am 7000", "ARCB-0204", "3060184", "ЦЕХ ИКС Уколов", "06.04.2024", "В резерве");
     Drager ARCB_0524 = new Drager("Drager x-Am 7000", "ARCB-0524", "3060183", "ЦЕХ ИКС Уколов", "14.03.2024", "В работе");
     Drager ARCB_0212 = new Drager("Drager x-Am 7000", "ARCB-0212", "3060181", "ЦЕХ ИКС Уколов", "20.07.2024", "Калибровка");

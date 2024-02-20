@@ -29,9 +29,9 @@ public class MainController {
         String date=CheckCalendar.checkDate();
         page.addAttribute("date",date);
 
-        dragerService.getSpisok();
-        var pribory=dragerService.showSpisok();
-        page.addAttribute("pribory",pribory);
+        dragerService.getDragerList();
+        var dragers=dragerService.showDragerList();
+        page.addAttribute("dragers",dragers);
         if(checkLogin) return "drager.html";
         else return "login.html";
     }

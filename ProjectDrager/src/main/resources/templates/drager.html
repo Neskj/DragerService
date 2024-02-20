@@ -17,14 +17,14 @@
         <td>Расположение</td>
     </tr>
 
-    <tr  th:bgcolor="${spisokDrager.flag}" th:each="spisokDrager: ${pribory}">
-        <td align="center" th:text="${spisokDrager.model}"></td>
-        <td align="center" th:text="${spisokDrager.serial}"></td>
-        <td align="center" th:text="${spisokDrager.inventoryNumber}"></td>
-        <td align="center" th:text="${spisokDrager.owner}"></td>
+    <tr  th:bgcolor="${dragerList.flag}" th:each="dragerList: ${dragers}">
+        <td align="center" th:text="${dragerList.model}"></td>
+        <td align="center" th:text="${dragerList.serial}"></td>
+        <td align="center" th:text="${dragerList.inventoryNumber}"></td>
+        <td align="center" th:text="${dragerList.owner}"></td>
         <td align="center"
-            th:text="${spisokDrager.verification}"></td>
-        <td align="center" th:text="${spisokDrager.status}"></td>
+            th:text="${dragerList.verification}"></td>
+        <td align="center" th:text="${dragerList.status}"></td>
     </tr>
 
 
