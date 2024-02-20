@@ -44,7 +44,7 @@ public class DragerService {
         Calendar cal1=Calendar.getInstance();
         Calendar cal2=Calendar.getInstance();
 
-        cal2.setTime(former.parse(CheckCalendar.CheckDate()));
+        cal2.setTime(former.parse(CheckCalendar.checkDate()));
 
         for(Drager x: spisokDrager){
             cal1.setTime(former.parse(x.getVerification()));

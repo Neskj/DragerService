@@ -4,11 +4,10 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class CheckCalendar {
-    public static String CheckDate(){
-        var formatter=new SimpleDateFormat("dd.MM.yyyy");
-        var objDate=new Date();
-        String date=formatter.format(objDate);
+    public static String checkDate() {
+        var formatter = new SimpleDateFormat("dd.MM.yyyy");
+        var objectDate = new Date();
+        String date = formatter.format(objectDate);
         return date;
     }
-
 }

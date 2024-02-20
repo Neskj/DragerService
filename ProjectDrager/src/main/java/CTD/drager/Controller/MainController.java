@@ -26,7 +26,7 @@ public class MainController {
 
     @GetMapping("/drager")
     public String drager(Model page){
-        String date=CheckCalendar.CheckDate();
+        String date=CheckCalendar.checkDate();
         page.addAttribute("date",date);
 
         dragerService.getSpisok();
