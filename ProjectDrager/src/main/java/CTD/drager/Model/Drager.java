@@ -1,10 +1,10 @@
 package CTD.drager.Model;
 
 public class Drager {
-    private String model;
-    private String serial;
+    private final String model;
+    private final String serial;
     private final String inventoryNumber;
-    private String owner;
+    private final String owner;
     private String verification;
     private String status;
     private String flag;
