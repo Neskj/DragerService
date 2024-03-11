@@ -12,12 +12,8 @@ import org.springframework.web.context.annotation.RequestScope;
 @Service
 @RequestScope
 public class SimpleLoginService implements LoginService{
-    public String username;
-    public String password;
 
     public boolean getLogged(String username, String password){
-        this.username=username;
-        this.password=password;
         return username.equals("ctd")&&password.equals("1234");
     }
 }
