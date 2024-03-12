@@ -45,7 +45,7 @@ public class MainController {
             checkLogin=true;
             return "redirect:/drager";
         } else {
-            page.addAttribute("message","Не правильный логин или пароль!");
+            page.addAttribute("message","Неправильный логин или пароль!");
             return "login.html";
         }
     }
