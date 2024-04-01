@@ -4,6 +4,8 @@ import CTD.drager.Calendar.CheckCalendar;
 import CTD.drager.Model.Drager;
 import CTD.drager.Repository.DragerClassRepository;
 import CTD.drager.Repository.DragerRepository;
+import CTD.drager.Repository.PostgresRepository;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -13,14 +15,13 @@ import java.util.Calendar;
 @Service
 public class DragerService {
     private ArrayList<Drager> dragerList;
-    private final DragerRepository dragerRepository;
+    private DragerRepository dragerRepository;
 
-    DragerService(DragerRepository dragerRepository) {
+    DragerService(@Qualifier("postgresRepository") DragerRepository dragerRepository) {
         this.dragerRepository = dragerRepository;
     }
 
     public void getDragerList() {
-        DragerRepository dragerRepository = new DragerClassRepository();
         this.dragerList = dragerRepository.returnDrager();
     }
 
