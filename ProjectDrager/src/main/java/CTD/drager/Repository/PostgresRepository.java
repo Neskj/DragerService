@@ -5,7 +5,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
-
 import java.util.ArrayList;
 
 @Repository
@@ -18,7 +17,6 @@ public class PostgresRepository implements DragerRepository{
 
         this.jdbc=jdbc;
     }
-
 
     @Override
     public ArrayList<Drager> returnDrager() {
@@ -36,7 +34,6 @@ public class PostgresRepository implements DragerRepository{
             rowDrager.setFlag(r.getString("flag"));
             return rowDrager;
         };
-
 
         return (ArrayList<Drager>) jdbc.query(sql,mapper);
     }

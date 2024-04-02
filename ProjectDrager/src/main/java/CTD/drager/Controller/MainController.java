@@ -1,12 +1,12 @@
 package CTD.drager.Controller;
 
+import CTD.drager.Calendar.CheckCalendar;
 import CTD.drager.Service.DragerService;
 import CTD.drager.Service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import CTD.drager.Calendar.CheckCalendar;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -24,13 +24,15 @@ public class MainController {
 
     @GetMapping("/drager")
     public String drager(Model page){
-        String date=CheckCalendar.checkDate();
-        page.addAttribute("date",date);
+        String date = CheckCalendar.checkDate();
+        page.addAttribute("date", date);
         dragerService.getDragerList();
-        var dragers=dragerService.showDragerList();
-        page.addAttribute("dragers",dragers);
-        if(checkLogin) return "drager.html";
-        else return "login.html";
+        var dragers = dragerService.showDragerList();
+        page.addAttribute("dragers", dragers);
+        if (checkLogin) {
+            checkLogin = false;
+            return "drager.html";
+        } else return "login.html";
     }
 
     @GetMapping("/")
