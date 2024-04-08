@@ -21,7 +21,7 @@ public class PostgresRepository implements DragerRepository{
     @Override
     public ArrayList<Drager> returnDrager() {
 
-        String sql="select * from drager";
+        String sql="select * from drager order by order_id";
 
         RowMapper<Drager> mapper=(r,i)->{
             Drager rowDrager=new Drager();
