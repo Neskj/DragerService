@@ -11,6 +11,8 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.ArrayList;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -43,12 +45,22 @@ public class DragerServiceTest {
         dragerService.getDragerList();
         verify(dragerRepository).returnDrager();    //getDragerList вернет void, по этому не можем исп. assertEuals
     }
-/*
-    @Test
-    public void showDragerListHappyFlow(){
 
+    @Test
+    public void showDragerListReturnNotNullHappyFlow() {
+        when(dragerRepository.returnDrager()).thenReturn(dragerList);
+        dragerService.getDragerList();
+        assertNotNull(dragerService.showDragerList());
     }
 
+    @Test
+    public void showDragerListReturnListHappyFlow() {
+
+        when(dragerRepository.returnDrager()).thenReturn(dragerList);
+        dragerService.getDragerList();
+        assertEquals(dragerList, dragerService.showDragerList());
+    }
+/*
     @Test
     public void checkFlagsHappyFlow(){
 
