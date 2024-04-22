@@ -58,6 +58,19 @@ public class MainControllerTest {
         verify(page).addAttribute("message","Добро пожаловать!");
     }
 
+    @Test
+    public void loginPostEnterWrongParametres(){
+
+        String username="wrongLogin";
+        String password="wrongPass";
+
+        when(loginService.getLogged(username,password)).thenReturn(false);
+        String result=mainController.loginPost(username,password,page);
+        assertNotNull(result);
+        assertEquals("login.html",result);
+        verify(page).addAttribute("message","Неправильный логин или пароль!");
+    }
+
 
 
 
