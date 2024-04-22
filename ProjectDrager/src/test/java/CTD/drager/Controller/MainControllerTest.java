@@ -24,6 +24,8 @@ import static org.mockito.Mockito.when;
 public class MainControllerTest {
 
     @Mock
+    Model page;
+    @Mock
     private LoginService loginService;
     @Mock
     private DragerService dragerService;
@@ -43,25 +45,20 @@ public class MainControllerTest {
         assertEquals("login.html",result);
     }
 
-
-
-    /*
-
     @Test
-    public void getDragerHtmlPageWhenLogedIn(){
+    public void loginPostEnterRightParametres(){
 
+        String username="testLogin";
+        String password="testPass";
 
+        when(loginService.getLogged(username,password)).thenReturn(true);
+        String result=mainController.loginPost(username,password,page);
+        assertNotNull(result);
+        assertEquals("redirect:/drager",result);
+        verify(page).addAttribute("message","Добро пожаловать!");
     }
 
-    @Test
-    public void getLoginHtmlPageHappyFlow(){
 
-    }
 
-    @Test
-    public void postLoginHtmlPageHappyFlow(){
 
-    }
-
-  */
 }
