@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>drager</title>
+</head>
+<body align="center">
+<h1>Список газоанализаторов Drager в ЦТД ПУ ЭРЭМО</h1>
+<h2>Сегодня: <span th:text="${date}"></span> </h2>
+<table border="=1" align="center">
+    <tr bgcolor="#a9a9a9">
+        <td>Тип</td>
+        <td>Заводской номер</td>
+        <td>Инвентарный номер</td>
+        <td>Ответственный</td>
+        <td>Следующая калибровка</td>
+        <td>Расположение</td>
+    </tr>
+
+    <tr  th:bgcolor="${dragerList.flag}" th:each="dragerList: ${dragers}">
+        <td align="center" th:text="${dragerList.model}"></td>
+        <td align="center" th:text="${dragerList.serial}"></td>
+        <td align="center" th:text="${dragerList.inventoryNumber}"></td>
+        <td align="center" th:text="${dragerList.owner}"></td>
+        <td align="center"
+            th:text="${dragerList.verification}"></td>
+        <td align="center" th:text="${dragerList.status}"></td>
+    </tr>
+
+
+</table>
+</body>
+</html>
