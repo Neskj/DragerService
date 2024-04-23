@@ -1,10 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>drager</title>
+    <style>
+        .blue-bar {
+            background-color: #0069A9;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+        }
+        .blue-bar h1 {
+            margin: 0;
+        }
+        body {
+            font-family: "Verdana", "sans-serif";
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        form {
+            margin: 0 auto;
+            width: 400px;
+            padding: 2px;
+            background-color: #0069A9;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+        h2{
+            color: white;
+            font-family:  "Verdana","sans-serif";
+        }
+        table{
+            font-family: "Verdana","sans-serif";
+            width: 80%;
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body>
+<img src=https://www.mosvodokanal.ru/local/templates/mvk_main_page/i/i-mvk-logo.png >
+<br/><br>
+<div class="blue-bar">
+    <h1>Список газоанализаторов Drager в ЦТД ПУ ЭРЭМО</h1>
+</div>
+<br>
+<form>
+    <h2>Сегодня: <span th:text="${date}"></span> </h2>
+</form>
+<br>
+<table border="1" align="center">
+    <tr bgcolor="#96A5C6" style="height: 30px">
+        <td><b>Тип</b></td>
+        <td><b>Заводской номер</b></td>
+        <td><b>Инвентарный номер</b></td>
+        <td><b>Ответственный</b></td>
+        <td><b>Следующая калибровка</b></td>
+        <td><b>Расположение</b></td>
+    </tr>
 
+    <tr th:bgcolor="${dragerList.flag}" th:each="dragerList: ${dragers}">
+        <td align="center" th:text="${dragerList.model}"></td>
+        <td align="center" th:text="${dragerList.serial}"></td>
+        <td align="center" th:text="${dragerList.inventoryNumber}"></td>
+        <td align="center" th:text="${dragerList.owner}"></td>
+        <td align="center"
+            th:text="${dragerList.verification}"></td>
+        <td align="center" th:text="${dragerList.status}"></td>
+    </tr>
+</table>
 </body>
 </html>
